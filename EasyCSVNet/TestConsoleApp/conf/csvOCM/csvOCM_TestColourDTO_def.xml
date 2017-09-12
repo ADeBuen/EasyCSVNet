@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog
+    PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
+           "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<!--
+	Object to CSV mapping (OCM) XML definition file
+	@author alex.debuen@gmail.com
+	@version 1.0.0.0 (build 20170824_150000)
+-->
+
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:csv="urn:csv">
+
+	<csv:csv xsi:schemaLocation="urn:csv schema/csvOCM_SimpleCSVFileImporter_schema.xsd">
+		<metadata>
+			<author>alex.debuen@gmail.com</author>
+			<version>1.0.0.0 (build 20160824_150000)</version>
+			<revision>2017-08-24+01:00</revision>
+			<mappedobjectfqdn>testconsoleapp.test.test001.TestCoulourDTO</mappedobjectfqdn>
+			<description>XML schema for CSV file import (TestColourDTO)</description>
+		</metadata>
+		<data>
+			<settings>
+				<titles>true</titles>
+				<delimiter>|</delimiter>
+				<stricttypecast>true</stricttypecast>
+				<encoding>System.Text.Encoding.Default</encoding>
+			</settings>
+			<fields>
+				<field id="NAME" position="0" nillable="false" quoted="false" description="Colour name"/>
+				<field id="PRICE" position="1" nillable="false" quoted="false" description="Colour price"/>
+				<field id="COMMENTS" position="2" nillable="true" quoted="false" description="Colour comments"/>
+			</fields>
+			<mapping>
+				<map field="NAME" attribute="_name" description="Mapping NAME to TestColourDTO._name"/>
+				<map field="PRICE" attribute="_price" description="Mapping PRICE to TestColourDTO._price"/>
+				<map field="COMMENTS" attribute="_comments" description="Mapping COMMENTS to TestColourDTO._comments"/>
+			</mapping>
+		</data>
+	</csv:csv>
+</catalog>

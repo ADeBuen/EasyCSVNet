@@ -1,0 +1,7 @@
+# Test 2 - Example : CSV file with a list of patients to be imported
+# Id,Name,Birthdate,AcceptFlag
+0,John B.,1979-07-25,Yes
+1,Kate C.,1982-03-24,Yes
+2,Carol D.,1954-01-11,No
+3,Kilian E.,1988-12-29,No
+4,Zacharias J.,,Yes

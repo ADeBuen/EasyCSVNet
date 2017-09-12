@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog
+    PUBLIC "-//OASIS//DTD Entity Resolution XML Catalog V1.0//EN"
+           "http://www.oasis-open.org/committees/entity/release/1.0/catalog.dtd">
+<!--
+	Object to CSV mapping (OCM) XML definition file
+	@author alex.debuen@gmail.com
+	@version 1.0.0.0 (build 20170824_150000)
+-->
+
+<catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		 xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:csv="urn:csv">
+
+	<csv:csv xsi:schemaLocation="urn:csv schema/csvOCM_SimpleCSVFileImporter_schema.xsd">
+		<metadata>
+			<author>alex.debuen@gmail.com</author>
+			<version>1.0.0.0 (build 20160824_150000)</version>
+			<revision>2017-08-24+01:00</revision>
+			<mappedobjectfqdn>testconsoleapp.test.test002.TestPatientDTO</mappedobjectfqdn>
+			<description>XML schema for CSV file import (TestPatientDTO)</description>
+		</metadata>
+		<data>
+			<settings>
+				<titles>false</titles>
+				<delimiter>,</delimiter>
+				<stricttypecast>true</stricttypecast>
+				<encoding>System.Text.Encoding.Default</encoding>
+			</settings>
+			<fields>
+				<field id="ID" position="0" nillable="false" quoted="false" description="Patient's ID"/>
+				<field id="NAME" position="1" nillable="false" quoted="false" description="Patient's name"/>
+				<field id="BIRTH_DATE" position="2" nillable="true" quoted="false" description="Patient's birth date"/>
+				<field id="ACCEPT_FLAG" position="3" nillable="true" quoted="false" description="Should we accept patient or skip it?"/>
+			</fields>
+			<mapping>
+				<map field="ID" attribute="_id" description="Mapping ID to TestPatientDTO._id"/>
+				<map field="NAME" attribute="_name" description="Mapping NAME to TestPatientDTO._name"/>
+				<map field="BIRTH_DATE" attribute="_birthDate" description="Mapping BIRTH_DATE to TestPatientDTO._birthDate"/>
+				<map field="ACCEPT_FLAG" attribute="_acceptFlag" description="Mapping ACCEPT_FLAG to TestPatientDTO._acceptFlag"/>
+			</mapping>
+		</data>
+	</csv:csv>
+</catalog>
